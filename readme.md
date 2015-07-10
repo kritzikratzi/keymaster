@@ -9,7 +9,7 @@ Then select the entry you like, double click or press enter and choose between
 * Type into next Application
 
 
-![Preview](assets/preview.png =585x)
+<img src="assets/preview.png" width="585" alt="Preview">
 
 Download 
 ---
