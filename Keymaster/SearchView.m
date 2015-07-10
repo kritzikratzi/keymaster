@@ -133,14 +133,19 @@
 
 // select first row when down is pressed
 - (BOOL)control:(NSControl *)control textView:(NSTextView *)textView doCommandBySelector:(SEL)command{
-	if( command == @selector(moveDown:)){
+	if( command == @selector(cancelOperation:)){
+		if( [self.searchField.stringValue isEqualTo:@""] ){
+			[NSApp hide:self];
+		}
+	}
+	else if( command == @selector(moveDown:)){
 		[self.tableView.window makeFirstResponder:self.tableView];
 		NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
 		[self.tableView selectRowIndexes:indexSet byExtendingSelection:NO];
 		return YES;
 	}
-	else{
-		return NO;
-	}
+	
+	
+	return NO;
 }
 @end

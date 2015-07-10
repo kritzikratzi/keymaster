@@ -10,9 +10,5 @@
 #import "SearchView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-@property (weak) IBOutlet SearchView *searchView;
-@property (strong, nonatomic) NSStatusItem *statusItem;
-@property (assign, nonatomic) BOOL darkModeOn;
-
 @end
 

@@ -13,6 +13,8 @@
 
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSMenu *statusMenu;
+@property (weak) IBOutlet SearchView *searchView;
+@property (strong, nonatomic) NSStatusItem *statusItem;
 @end
 
 @implementation AppDelegate
@@ -26,15 +28,13 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Create status bar icon
-	// following the guide from
+	// partially following the guide from
 	// https://nsrover.wordpress.com/2014/10/10/creating-a-os-x-menubar-only-app/
 	self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 	self.statusItem.image = [NSImage imageNamed:@"StatusIcon"];
-//	[self.statusItem setAction:@selector(itemClicked:)];
 	self.statusItem.menu = self.statusMenu;
-
-	_statusItem.highlightMode = YES;
-	_statusItem.toolTip = @"command-click to quit";
+	self.statusItem.highlightMode = YES;
+	self.statusItem.toolTip = @"With Keymaster mastering your keys becomes a breeze";
 	
 	// Register hotkey
 	// following the guide from
@@ -52,9 +52,6 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
 	// Insert code here to tear down your application
-}
-
-- (void) itemClicked: (id) sender{
 }
 
 - (IBAction)showPasswords:(id)sender {
