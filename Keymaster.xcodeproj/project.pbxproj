@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA49424E1B505FF500DBB2B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE67B181B40D46F00E17238 /* MainMenu.xib */; };
+		BA4942501B50600000DBB2B8 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA49424F1B50600000DBB2B8 /* Carbon.framework */; };
+		BAE67B131B40D46F00E17238 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE67B121B40D46F00E17238 /* AppDelegate.m */; };
+		BAE67B151B40D46F00E17238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE67B141B40D46F00E17238 /* main.m */; };
+		BAE67B171B40D46F00E17238 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE67B161B40D46F00E17238 /* Images.xcassets */; };
+		BAE67B261B40D46F00E17238 /* KeymasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE67B251B40D46F00E17238 /* KeymasterTests.m */; };
+		BAE67B301B40D4B500E17238 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE67B2F1B40D4B500E17238 /* Security.framework */; };
+		BAE67B321B40D4BE00E17238 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE67B311B40D4BE00E17238 /* CoreServices.framework */; };
+		BAE67B341B40D4C500E17238 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE67B331B40D4C500E17238 /* CoreFoundation.framework */; };
+		BAE67B3F1B40D77800E17238 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE67B3D1B40D77800E17238 /* SearchView.m */; };
+		BAE67B401B40D77800E17238 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE67B3E1B40D77800E17238 /* SearchView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAE67B201B40D46F00E17238 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAE67B041B40D46F00E17238 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE67B0B1B40D46F00E17238;
+			remoteInfo = Keymaster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA4942401B50296800DBB2B8 /* cfmadness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cfmadness.h; sourceTree = "<group>"; };
+		BA49424F1B50600000DBB2B8 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		BAE67B0C1B40D46F00E17238 /* Keymaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keymaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE67B101B40D46F00E17238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE67B111B40D46F00E17238 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BAE67B121B40D46F00E17238 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BAE67B141B40D46F00E17238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BAE67B161B40D46F00E17238 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BAE67B191B40D46F00E17238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BAE67B1F1B40D46F00E17238 /* KeymasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeymasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE67B241B40D46F00E17238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE67B251B40D46F00E17238 /* KeymasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeymasterTests.m; sourceTree = "<group>"; };
+		BAE67B2F1B40D4B500E17238 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BAE67B311B40D4BE00E17238 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		BAE67B331B40D4C500E17238 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		BAE67B3C1B40D77800E17238 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		BAE67B3D1B40D77800E17238 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		BAE67B3E1B40D77800E17238 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAE67B091B40D46F00E17238 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4942501B50600000DBB2B8 /* Carbon.framework in Frameworks */,
+				BAE67B341B40D4C500E17238 /* CoreFoundation.framework in Frameworks */,
+				BAE67B321B40D4BE00E17238 /* CoreServices.framework in Frameworks */,
+				BAE67B301B40D4B500E17238 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE67B1C1B40D46F00E17238 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAE67B031B40D46F00E17238 = {
+			isa = PBXGroup;
+			children = (
+				BA49424F1B50600000DBB2B8 /* Carbon.framework */,
+				BAE67B331B40D4C500E17238 /* CoreFoundation.framework */,
+				BAE67B311B40D4BE00E17238 /* CoreServices.framework */,
+				BAE67B2F1B40D4B500E17238 /* Security.framework */,
+				BAE67B0E1B40D46F00E17238 /* Keymaster */,
+				BAE67B221B40D46F00E17238 /* KeymasterTests */,
+				BAE67B0D1B40D46F00E17238 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAE67B0D1B40D46F00E17238 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAE67B0C1B40D46F00E17238 /* Keymaster.app */,
+				BAE67B1F1B40D46F00E17238 /* KeymasterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAE67B0E1B40D46F00E17238 /* Keymaster */ = {
+			isa = PBXGroup;
+			children = (
+				BAE67B111B40D46F00E17238 /* AppDelegate.h */,
+				BAE67B121B40D46F00E17238 /* AppDelegate.m */,
+				BAE67B161B40D46F00E17238 /* Images.xcassets */,
+				BAE67B181B40D46F00E17238 /* MainMenu.xib */,
+				BAE67B0F1B40D46F00E17238 /* Supporting Files */,
+				BAE67B3C1B40D77800E17238 /* SearchView.h */,
+				BAE67B3D1B40D77800E17238 /* SearchView.m */,
+				BAE67B3E1B40D77800E17238 /* SearchView.xib */,
+				BA4942401B50296800DBB2B8 /* cfmadness.h */,
+			);
+			path = Keymaster;
+			sourceTree = "<group>";
+		};
+		BAE67B0F1B40D46F00E17238 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAE67B101B40D46F00E17238 /* Info.plist */,
+				BAE67B141B40D46F00E17238 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAE67B221B40D46F00E17238 /* KeymasterTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAE67B251B40D46F00E17238 /* KeymasterTests.m */,
+				BAE67B231B40D46F00E17238 /* Supporting Files */,
+			);
+			path = KeymasterTests;
+			sourceTree = "<group>";
+		};
+		BAE67B231B40D46F00E17238 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAE67B241B40D46F00E17238 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAE67B0B1B40D46F00E17238 /* Keymaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE67B291B40D46F00E17238 /* Build configuration list for PBXNativeTarget "Keymaster" */;
+			buildPhases = (
+				BAE67B081B40D46F00E17238 /* Sources */,
+				BAE67B091B40D46F00E17238 /* Frameworks */,
+				BAE67B0A1B40D46F00E17238 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keymaster;
+			productName = Keymaster;
+			productReference = BAE67B0C1B40D46F00E17238 /* Keymaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAE67B1E1B40D46F00E17238 /* KeymasterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE67B2C1B40D46F00E17238 /* Build configuration list for PBXNativeTarget "KeymasterTests" */;
+			buildPhases = (
+				BAE67B1B1B40D46F00E17238 /* Sources */,
+				BAE67B1C1B40D46F00E17238 /* Frameworks */,
+				BAE67B1D1B40D46F00E17238 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAE67B211B40D46F00E17238 /* PBXTargetDependency */,
+			);
+			name = KeymasterTests;
+			productName = KeymasterTests;
+			productReference = BAE67B1F1B40D46F00E17238 /* KeymasterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAE67B041B40D46F00E17238 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = superduper;
+				TargetAttributes = {
+					BAE67B0B1B40D46F00E17238 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					BAE67B1E1B40D46F00E17238 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = BAE67B0B1B40D46F00E17238;
+					};
+				};
+			};
+			buildConfigurationList = BAE67B071B40D46F00E17238 /* Build configuration list for PBXProject "Keymaster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAE67B031B40D46F00E17238;
+			productRefGroup = BAE67B0D1B40D46F00E17238 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAE67B0B1B40D46F00E17238 /* Keymaster */,
+				BAE67B1E1B40D46F00E17238 /* KeymasterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAE67B0A1B40D46F00E17238 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE67B171B40D46F00E17238 /* Images.xcassets in Resources */,
+				BAE67B401B40D77800E17238 /* SearchView.xib in Resources */,
+				BA49424E1B505FF500DBB2B8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE67B1D1B40D46F00E17238 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAE67B081B40D46F00E17238 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE67B151B40D46F00E17238 /* main.m in Sources */,
+				BAE67B3F1B40D77800E17238 /* SearchView.m in Sources */,
+				BAE67B131B40D46F00E17238 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE67B1B1B40D46F00E17238 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE67B261B40D46F00E17238 /* KeymasterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAE67B211B40D46F00E17238 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAE67B0B1B40D46F00E17238 /* Keymaster */;
+			targetProxy = BAE67B201B40D46F00E17238 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BAE67B181B40D46F00E17238 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAE67B191B40D46F00E17238 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAE67B271B40D46F00E17238 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BAE67B281B40D46F00E17238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BAE67B2A1B40D46F00E17238 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Keymaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BAE67B2B1B40D46F00E17238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Keymaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BAE67B2D1B40D46F00E17238 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeymasterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keymaster.app/Contents/MacOS/Keymaster";
+			};
+			name = Debug;
+		};
+		BAE67B2E1B40D46F00E17238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeymasterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keymaster.app/Contents/MacOS/Keymaster";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAE67B071B40D46F00E17238 /* Build configuration list for PBXProject "Keymaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE67B271B40D46F00E17238 /* Debug */,
+				BAE67B281B40D46F00E17238 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE67B291B40D46F00E17238 /* Build configuration list for PBXNativeTarget "Keymaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE67B2A1B40D46F00E17238 /* Debug */,
+				BAE67B2B1B40D46F00E17238 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE67B2C1B40D46F00E17238 /* Build configuration list for PBXNativeTarget "KeymasterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE67B2D1B40D46F00E17238 /* Debug */,
+				BAE67B2E1B40D46F00E17238 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAE67B041B40D46F00E17238 /* Project object */;
+}
