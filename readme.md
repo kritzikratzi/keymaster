@@ -11,6 +11,11 @@ Then select the entry you like, double click or press enter and choose between
 
 ![Preview](assets/preview.png =585x)
 
+Download 
+---
+Binaries for Mac OSX 10.9+ can be found in the [Releases](https://github.com/kritzikratzi/keymaster/releases) section on github. 
+
+
 License
 ---
 

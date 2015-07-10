@@ -56,6 +56,7 @@
 
 - (void) appear{
 	[NSApp activateIgnoringOtherApps:YES];
+	[self.view.window setIsVisible:YES]; 
 	[self.view.window makeFirstResponder:self.searchField];
 	[self.searchField selectText:self.searchField];
 }
