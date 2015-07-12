@@ -48,6 +48,9 @@
 		[self iterateKeychainWithType:kSecClassInternetPassword];
 		[self iterateKeychainWithType:kSecClassGenericPassword];
 		
+		NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
+		[self.tableView selectRowIndexes:indexSet byExtendingSelection:NO];
+
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appear) name:@"appear" object:nil];
 	}
 	
@@ -107,10 +110,12 @@
 }
 
 - (IBAction)copyPassword:(id)sender {
-	KeystoreEntry * entry = self.entries.selectedObjects.firstObject; 
+	KeystoreEntry * entry = self.entries.selectedObjects.firstObject;
+	NSString * password = entry.password;
 	NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
+	[pasteBoard clearContents];
 	[pasteBoard declareTypes:[NSArray arrayWithObjects:NSStringPboardType, nil] owner:nil];
-	[pasteBoard setString: entry.password forType:NSStringPboardType];
+	[pasteBoard setString: password forType:NSStringPboardType];
 }
 
 - (IBAction)typePassword:(id)sender {
@@ -140,8 +145,14 @@
 	}
 	else if( command == @selector(moveDown:)){
 		[self.tableView.window makeFirstResponder:self.tableView];
-		NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
+		[self.tableView scrollRowToVisible:self.tableView.selectedRow];
+		return YES;
+	}
+	else if( command == @selector(moveUp:)){
+		[self.tableView.window makeFirstResponder:self.tableView];
+		NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:self.tableView.numberOfRows-1];
 		[self.tableView selectRowIndexes:indexSet byExtendingSelection:NO];
+		[self.tableView scrollRowToVisible:self.tableView.selectedRow];
 		return YES;
 	}
 	

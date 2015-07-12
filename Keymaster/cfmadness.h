@@ -43,7 +43,7 @@ NSString * cf_getPassword ( CFDictionaryRef dict ){
 	OSStatus status1 ;
 	
 	if( CFEqual( cls, kSecClassGenericPassword ) ){
-		NSString * service = cf_dictString(dict, kSecAttrServer);
+		NSString * service = cf_dictString(dict, kSecAttrService);
 		NSString * account = cf_dictString(dict, kSecAttrAccount);
 
 		status1 = SecKeychainFindGenericPassword (
@@ -93,8 +93,14 @@ NSString * cf_getPassword ( CFDictionaryRef dict ){
 		return @"";
 	}
 	
+	// http://lists.apple.com/archives/cocoa-dev/2010/Jan/msg01834.html
+	char * buffer = (char *) malloc((passwordLength + 1) * sizeof(char));
+	strncpy(buffer, passwordData, passwordLength);
+	buffer[passwordLength] = 0;
+	NSString * result = [NSString stringWithUTF8String:buffer];
+	free(buffer);
 	
-	return [NSString stringWithUTF8String:passwordData];
+	return result;
 }
 
 
