@@ -159,4 +159,18 @@
 	
 	return NO;
 }
+
+- (BOOL)tableView:(NSTableView *)tableView
+shouldTypeSelectForEvent:(NSEvent *)event
+withCurrentSearchString:(NSString *)searchString{
+	if( [@"c" isEqualToString:event.characters] ){
+		[self copyPassword:tableView];
+	}
+	else if( [@"t" isEqualToString:event.characters]){
+		[self typePassword:tableView];
+	}
+	return NO;
+}
+
+
 @end

@@ -123,16 +123,16 @@
         <arrayController objectClassName="KeystoreEntry" editable="NO" id="4WQ-Y8-vuZ"/>
         <menu autoenablesItems="NO" id="Sbe-Qh-POx">
             <items>
-                <menuItem title="Copy to Clipboard" id="XST-nF-200">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="copyPassword:" target="-2" id="Kab-49-bP2"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Type into next Application" id="k0p-ja-vez">
+                <menuItem title="Type into next Application" keyEquivalent="t" id="k0p-ja-vez">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="typePassword:" target="-2" id="zgH-UU-hz8"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Copy to Clipboard" keyEquivalent="c" id="XST-nF-200">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="copyPassword:" target="-2" id="Kab-49-bP2"/>
                     </connections>
                 </menuItem>
             </items>
