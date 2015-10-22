@@ -7,14 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#include "Editor.h"
 #import <Carbon/Carbon.h>
 
-@interface AppDelegate ()
+@interface AppDelegate (){
+	Editor * editor;
+}
 
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSMenu *statusMenu;
 @property (weak) IBOutlet SearchView *searchView;
 @property (strong, nonatomic) NSStatusItem *statusItem;
+- (IBAction)showPasswordEditor:(id)sender;
+- (IBAction)reloadPasswords:(id)sender;
+
 @end
 
 @implementation AppDelegate
@@ -22,11 +28,17 @@
 OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData){
 	NSNotification * notification = [NSNotification notificationWithName:@"appear" object:nil];
 	[[NSNotificationCenter defaultCenter] postNotification:notification];
+	
+	AppDelegate *appDelegate = (AppDelegate *)[NSApp delegate];
+	[appDelegate appear]; 
 	return 0;
 }
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	// create editor
+	editor = [[Editor alloc] initWithWindowNibName:@"Editor"];
+	
 	// Create status bar icon
 	// partially following the guide from
 	// https://nsrover.wordpress.com/2014/10/10/creating-a-os-x-menubar-only-app/
@@ -63,4 +75,21 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 	[[NSRunningApplication currentApplication] terminate];
 }
 
+- (IBAction)showPasswordEditor:(id)sender {
+	[editor reset];
+	[editor.window makeKeyAndOrderFront: nil];
+}
+
+- (IBAction)reloadPasswords:(id)sender {
+	NSNotification * notification = [NSNotification notificationWithName:@"appear" object:nil];
+	[[NSNotificationCenter defaultCenter] postNotification:notification];
+}
+
+- (void) appear{
+	[self.searchView appear];
+}
+
+-(void) reloadPasswords{
+	[self.searchView reloadPasswords];
+}
 @end

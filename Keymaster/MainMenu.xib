@@ -14,7 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="searchView" destination="EiT-Mj-1SZ" id="6ue-Ib-LOT"/>
+                <outlet property="searchView" destination="Z0J-GN-8B0" id="B6b-eX-EBo"/>
                 <outlet property="statusMenu" destination="Zkc-Dd-kyW" id="6AB-XG-AWr"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -673,12 +673,38 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <value key="minSize" type="size" width="480" height="360"/>
-            <view key="contentView" id="EiT-Mj-1SZ" userLabel="View" customClass="SearchView">
+            <view key="contentView" id="EiT-Mj-1SZ" userLabel="View">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0J-GN-8B0" customClass="SearchView">
+                        <rect key="frame" x="0.0" y="41" width="480" height="319"/>
+                    </customView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wzM-qQ-mWr" userLabel="addPasswordButton">
+                        <rect key="frame" x="338" y="11" width="128" height="32"/>
+                        <buttonCell key="cell" type="push" title="Add Password" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="f2a-yo-kcK">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showPasswordEditor:" target="Voe-Tx-rLC" id="YLL-57-yAt"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Av-A3-pUv" userLabel="addPasswordButton">
+                        <rect key="frame" x="255" y="11" width="83" height="32"/>
+                        <buttonCell key="cell" type="push" title="Reload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DOI-1x-XlY">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <action selector="reloadPasswords:" target="Voe-Tx-rLC" id="dZx-j8-LxZ"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
+                </subviews>
             </view>
+            <point key="canvasLocation" x="399" y="551"/>
         </window>
         <menu id="Zkc-Dd-kyW" userLabel="Status Menu">
             <items>

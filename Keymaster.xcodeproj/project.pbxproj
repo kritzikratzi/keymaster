@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA49424E1B505FF500DBB2B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE67B181B40D46F00E17238 /* MainMenu.xib */; };
+		BA485BC31BD8718100E0F73A /* KeychainTools.m in Sources */ = {isa = PBXBuildFile; fileRef = BA485BC21BD8718100E0F73A /* KeychainTools.m */; };
+		BA485BC71BD871DA00E0F73A /* Editor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA485BC51BD871DA00E0F73A /* Editor.m */; };
+		BA485BC81BD871DA00E0F73A /* Editor.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA485BC61BD871DA00E0F73A /* Editor.xib */; };
+		BA485BCA1BD8724C00E0F73A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA485BC91BD8724C00E0F73A /* MainMenu.xib */; };
 		BA4942501B50600000DBB2B8 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA49424F1B50600000DBB2B8 /* Carbon.framework */; };
 		BAE67B131B40D46F00E17238 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE67B121B40D46F00E17238 /* AppDelegate.m */; };
 		BAE67B151B40D46F00E17238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE67B141B40D46F00E17238 /* main.m */; };
@@ -31,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA485BC11BD8718100E0F73A /* KeychainTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainTools.h; sourceTree = "<group>"; };
+		BA485BC21BD8718100E0F73A /* KeychainTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainTools.m; sourceTree = "<group>"; };
+		BA485BC41BD871DA00E0F73A /* Editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Editor.h; sourceTree = "<group>"; };
+		BA485BC51BD871DA00E0F73A /* Editor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Editor.m; sourceTree = "<group>"; };
+		BA485BC61BD871DA00E0F73A /* Editor.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Editor.xib; sourceTree = "<group>"; };
+		BA485BC91BD8724C00E0F73A /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		BA4942401B50296800DBB2B8 /* cfmadness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cfmadness.h; sourceTree = "<group>"; };
 		BA49424F1B50600000DBB2B8 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		BAE67B0C1B40D46F00E17238 /* Keymaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keymaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +48,6 @@
 		BAE67B121B40D46F00E17238 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BAE67B141B40D46F00E17238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BAE67B161B40D46F00E17238 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BAE67B191B40D46F00E17238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BAE67B1F1B40D46F00E17238 /* KeymasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeymasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE67B241B40D46F00E17238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE67B251B40D46F00E17238 /* KeymasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeymasterTests.m; sourceTree = "<group>"; };
@@ -101,12 +109,17 @@
 				BAE67B111B40D46F00E17238 /* AppDelegate.h */,
 				BAE67B121B40D46F00E17238 /* AppDelegate.m */,
 				BAE67B161B40D46F00E17238 /* Images.xcassets */,
-				BAE67B181B40D46F00E17238 /* MainMenu.xib */,
+				BA485BC91BD8724C00E0F73A /* MainMenu.xib */,
 				BAE67B0F1B40D46F00E17238 /* Supporting Files */,
 				BAE67B3C1B40D77800E17238 /* SearchView.h */,
 				BAE67B3D1B40D77800E17238 /* SearchView.m */,
 				BAE67B3E1B40D77800E17238 /* SearchView.xib */,
 				BA4942401B50296800DBB2B8 /* cfmadness.h */,
+				BA485BC41BD871DA00E0F73A /* Editor.h */,
+				BA485BC51BD871DA00E0F73A /* Editor.m */,
+				BA485BC61BD871DA00E0F73A /* Editor.xib */,
+				BA485BC11BD8718100E0F73A /* KeychainTools.h */,
+				BA485BC21BD8718100E0F73A /* KeychainTools.m */,
 			);
 			path = Keymaster;
 			sourceTree = "<group>";
@@ -219,7 +232,8 @@
 			files = (
 				BAE67B171B40D46F00E17238 /* Images.xcassets in Resources */,
 				BAE67B401B40D77800E17238 /* SearchView.xib in Resources */,
-				BA49424E1B505FF500DBB2B8 /* MainMenu.xib in Resources */,
+				BA485BC81BD871DA00E0F73A /* Editor.xib in Resources */,
+				BA485BCA1BD8724C00E0F73A /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +254,8 @@
 				BAE67B151B40D46F00E17238 /* main.m in Sources */,
 				BAE67B3F1B40D77800E17238 /* SearchView.m in Sources */,
 				BAE67B131B40D46F00E17238 /* AppDelegate.m in Sources */,
+				BA485BC31BD8718100E0F73A /* KeychainTools.m in Sources */,
+				BA485BC71BD871DA00E0F73A /* Editor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,17 +276,6 @@
 			targetProxy = BAE67B201B40D46F00E17238 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BAE67B181B40D46F00E17238 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BAE67B191B40D46F00E17238 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BAE67B271B40D46F00E17238 /* Debug */ = {

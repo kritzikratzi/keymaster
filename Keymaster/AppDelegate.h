@@ -10,5 +10,7 @@
 #import "SearchView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
+- (void) appear;
+- (void) reloadPasswords;
 @end
 

@@ -10,7 +10,7 @@
 
 @interface KeystoreEntry : NSObject
 @property (strong) NSString *label;
-@property (strong) NSString *username;
+@property (strong) NSString *username; // rename to account? 
 // good god, could this cause mem leaks? who the fuck knows!!!
 @property (strong) __attribute__((NSObject)) CFDictionaryRef dict;
 @property (readonly,getter=getPassword) NSString * password;
@@ -30,6 +30,7 @@
 
 - (IBAction)copyPassword:(id)sender;
 - (IBAction)typePassword:(id)sender;
-
+- (void) appear;
+- (void) reloadPasswords; 
 
 @end

@@ -45,13 +45,7 @@
 			[self addSubview:self.view];
 		}
 		
-		[self iterateKeychainWithType:kSecClassInternetPassword];
-		[self iterateKeychainWithType:kSecClassGenericPassword];
-		
-		NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
-		[self.tableView selectRowIndexes:indexSet byExtendingSelection:NO];
-
-		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appear) name:@"appear" object:nil];
+		[self reloadPasswords]; 
 	}
 	
 	return self;
@@ -62,6 +56,15 @@
 	[self.view.window setIsVisible:YES]; 
 	[self.view.window makeFirstResponder:self.searchField];
 	[self.searchField selectText:self.searchField];
+}
+
+- (void) reloadPasswords{
+	[[self.entries mutableArrayValueForKey:@"content"] removeAllObjects];
+	[self iterateKeychainWithType:kSecClassInternetPassword];
+	[self iterateKeychainWithType:kSecClassGenericPassword];
+	
+	NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
+	[self.tableView selectRowIndexes:indexSet byExtendingSelection:NO];
 }
 
 - (void) iterateKeychainWithType: (CFTypeRef)type{
