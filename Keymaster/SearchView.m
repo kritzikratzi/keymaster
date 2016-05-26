@@ -127,14 +127,22 @@
 	[NSApp hide:sender];
 
 	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-		unichar * ptr = malloc(2*password.length+2);
-		for( int i = 0; i < password.length; i++ ){
-			ptr[i] = [password characterAtIndex:i];
+		unichar * ptr = malloc(21*sizeof(unichar));
+		
+		// we can only do 20 chars at a time here it seems!
+		int start = 0;
+		while( start < password.length ){
+			NSUInteger len = MIN(password.length-start, 20);
+			for( int i = 0; i < len; i++ ){
+				ptr[i] = [password characterAtIndex:start+i];
+			}
+			ptr[len] = 0;
+			CGEventRef e = CGEventCreateKeyboardEvent(NULL, 0, true);
+			CGEventKeyboardSetUnicodeString(e, len, ptr);
+			CGEventPost(kCGHIDEventTap, e);
+			
+			start += len;
 		}
-		ptr[password.length] = 0;
-		CGEventRef e = CGEventCreateKeyboardEvent(NULL, 0, true);
-		CGEventKeyboardSetUnicodeString(e, password.length, ptr);
-		CGEventPost(kCGHIDEventTap, e);
 		free(ptr);
 	});
 }
